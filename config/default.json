@@ -1,0 +1,6 @@
+{
+  "port": 5000,
+  "jwtSecret": "khrystyna nodejs react",
+  "mongoUrl": "mongodb+srv://khrystyna:RhbcnbMongo50!@cluster0.5wwkc.mongodb.net/nodejs?retryWrites=true&w=majority",
+  "baseUrl": "http://localhost:5000"
+}
