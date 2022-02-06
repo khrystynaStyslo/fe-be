@@ -4,8 +4,8 @@
 
 /coverage
 
-/build
-build
+#/build
+#build
 
 .DS_Store
 .env.local
