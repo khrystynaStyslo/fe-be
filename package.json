@@ -4,10 +4,12 @@
   "description": "Node js",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "cross-env NODE_ENV=production node app.js",
     "server": "nodemon app.js",
     "client": "npm run start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "client:install": "npm install --prefix client",
+    "client:build": "npm run build --prefix client",
+    "dev": "cross-env NODE_END=development concurrently \"npm run server\" \"npm run client\""
   },
   "author": "Khrystyna Styslo <khrystyna.styslo@gmail.com>",
   "license": "ISC",
@@ -18,10 +20,12 @@
     "express-validator": "^6.13.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.0.13",
+    "path": "^0.12.7",
     "shortid": "^2.2.16"
   },
   "devDependencies": {
     "concurrently": "^6.4.0",
+    "cross-env": "^7.0.3",
     "nodemon": "^2.0.15"
   }
 }

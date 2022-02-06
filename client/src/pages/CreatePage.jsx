@@ -1,7 +1,7 @@
 import React, {useCallback, useContext, useEffect, useState} from 'react'
 import {useHttp} from "../hooks/http.hook"
 import {AuthContext} from "../context/AuthContext"
-import {useNavigate} from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 export const CreatePage = () => {
   const navigate = useNavigate()
@@ -16,10 +16,10 @@ export const CreatePage = () => {
   const pressHandler = useCallback(async (event) => {
     if (event.key === 'Enter') {
       try {
-        console.log('link', link)
         const data = await request('/api/link/generate', 'POST', {from: link}, {
           Authorization: `Bearer ${auth.token}`
         })
+        console.log('data link', data)
         navigate(`/detail/${data.link._id}`)
       } catch (e) {
       }

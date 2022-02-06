@@ -11,7 +11,7 @@ router.post(
     '/register',
     [
         check('email', 'Input correct email').normalizeEmail().isEmail(),
-        check('password', 'Input password').exists()
+        check('password', 'Input password').exists().isLength({ min: 6 })
     ],
     async (req, res) => {
     try {
@@ -51,6 +51,7 @@ router.post(
             const errors = validationResult(req)
 
             if (!errors.isEmpty()) {
+                console.log('errors', errors)
                 return res.status(400).json({ errors: errors.array(), message: 'Validation errors in login' })
             }
 
