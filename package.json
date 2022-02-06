@@ -23,10 +23,10 @@
     "mongoose": "^6.0.13",
     "path": "^0.12.7",
     "shortid": "^2.2.16",
-    "cross-env": "^7.0.3"
+    "cross-env": "^7.0.3",
+    "concurrently": "^6.4.0"
   },
   "devDependencies": {
-    "concurrently": "^6.4.0",
     "nodemon": "^2.0.15"
   }
 }
