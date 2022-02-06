@@ -4,7 +4,7 @@
   "description": "Node js",
   "main": "app.js",
   "scripts": {
-    "start": "\"npm install\" cross-env NODE_END=production concurrently \"npm run start-node\" \"npm run client:install\" \"npm run client:build\"",
+    "start": "cross-env NODE_END=production concurrently \"npm run start-node\" \"npm run client:install\" \"npm run client:build\"",
     "start-node": "node app.js",
     "server": "nodemon app.js",
     "client": "npm run start --prefix client",
@@ -22,11 +22,11 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.0.13",
     "path": "^0.12.7",
-    "shortid": "^2.2.16"
+    "shortid": "^2.2.16",
+    "cross-env": "^7.0.3"
   },
   "devDependencies": {
     "concurrently": "^6.4.0",
-    "cross-env": "^7.0.3",
     "nodemon": "^2.0.15"
   }
 }
